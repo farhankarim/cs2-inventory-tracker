@@ -31,6 +31,16 @@ cd cs2-inventory-tracker
 pip install -r requirements.txt
 ```
 
+### Quick Start (Linux/Mac)
+
+For a quick automated setup, run:
+```bash
+chmod +x quickstart.sh
+./quickstart.sh
+```
+
+This will install dependencies and run a demo with sample data.
+
 ## Usage
 
 ### Basic Usage (Default Profile)

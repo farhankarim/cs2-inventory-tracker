@@ -290,6 +290,23 @@ class CS2InventoryTracker:
 
 def main():
     """Main function to run the inventory tracker."""
+    # Check for help flag
+    if len(sys.argv) > 1 and sys.argv[1] in ['-h', '--help', 'help']:
+        print("CS2 Inventory Tracker")
+        print("=" * 80)
+        print("\nUsage:")
+        print("  python fetch_inventory.py [STEAM_PROFILE_URL]")
+        print("\nExamples:")
+        print("  python fetch_inventory.py")
+        print("  python fetch_inventory.py https://steamcommunity.com/id/farhankarim/inventory")
+        print("  python fetch_inventory.py https://steamcommunity.com/profiles/76561198XXXXXXXXX")
+        print("\nDefault profile: https://steamcommunity.com/id/farhankarim/inventory")
+        print("\nNote: Steam inventory must be set to public.")
+        print("\nOutput:")
+        print("  - Console display of all inventory items")
+        print("  - JSON file (inventory.json) with detailed item information")
+        return
+    
     # Default profile URL
     profile_url = "https://steamcommunity.com/id/farhankarim/inventory"
     
