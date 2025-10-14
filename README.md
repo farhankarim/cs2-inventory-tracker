@@ -153,3 +153,36 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## Disclaimer
 
 This tool is for personal use only. Be respectful of Steam's servers and don't abuse the API. The script includes rate limiting to be nice to Steam's infrastructure.
+
+## Emailing a File from Your Inventory Tracker
+
+You can email a file (e.g., `cs2_prices.csv`) to yourself using the `email_file.py` script. This script uses environment variables for security and flexibility.
+
+### Setup Environment Variables
+Create a `.env` file (see `.env.example` for the required variables):
+
+```
+EMAIL_USER=your_email@gmail.com
+EMAIL_PASS=your_app_password
+EMAIL_TO=recipient_email@gmail.com
+```
+
+- `EMAIL_USER`: Your email address (sender)
+- `EMAIL_PASS`: Your email password or app password (for Gmail, generate an app password)
+- `EMAIL_TO`: Recipient email address (can be same as sender)
+
+### Send the Email
+Run the script:
+
+```bash
+python email_file.py
+```
+
+This will send `cs2_prices.csv` as an email attachment to the address specified in `EMAIL_TO`.
+
+#### Change the File to Send
+To send a different file, edit the `FILE_PATH` variable in `email_file.py`:
+
+```python
+FILE_PATH = 'your_file.csv'  # Change to the file you want to send
+```
