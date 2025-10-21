@@ -132,3 +132,5 @@ dmypy.json
 sample_inventory.json
 inventory.json
 cs2_prices.csv
+cookie.txt
+market_history.csv
